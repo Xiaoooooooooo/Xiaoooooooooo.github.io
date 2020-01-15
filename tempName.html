@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <script src="https://cdn.jsdelivr.net/npm/p5@0.10.2/lib/p5.js"></script>
+    <style>
+      * {
+      padding: 0;
+      margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+    var bImage;
+    var w = window.innerWidth;
+    var h = window.innerHeight;
+      function setup() {
+        createCanvas(w,h,WEBGL);
+        bImage = loadImage("ok.jpeg")
+      }
+      function draw() {
+        clear()
+        background(bImage);
+        //I will rotate around the Y axis when i move my house horizontally. i will divide by 100 to decrease mouse sensitivity.
+        rotateY(mouseX/100);
+        //I will rotate around the X axis when i move my house Vertically. i will divide by 100 to decrease mouse sensitivity.
+        rotateX(mouseY/100);
+        rect(100,100,200,200)
+        rect(500,30,200,200)
+        rect(-300,-300,200,200)
+        fill("red");
+        
+        noStroke();
+    }
+    </script>
+  </body>
+</html>
