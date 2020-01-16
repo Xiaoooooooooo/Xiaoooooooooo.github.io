@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <script src="https://cdn.jsdelivr.net/npm/p5@0.10.2/lib/p5.js"></script>
+    <style>
+      body {
+      padding: 0;
+      margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+    var w = window.innerWidth;
+    var h = window.innerHeight;
+      function setup() {
+        createCanvas(w,h);
+      }
+      function draw() {
+        if (mouseIsPressed) {
+          circle(mouseX,mouseY,20)
+          fill("black")
+      }
+    }
+    </script>
+  </body>
+</html>
