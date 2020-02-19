@@ -1,16 +1,16 @@
 <html>
   <script src="p5.js"></script>
-  <script>
+  <body>
+    <script>
     let img;
 function preload() {
   img = loadImage('photo.jpeg');
 }
 function setup() {
+  createCanvas(window.innerWidth,window.innerHeight);
   image(img,0,0);
 }
   </script>
-  <body>
-    
   </body>
 </html>
   
