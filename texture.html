@@ -7,6 +7,10 @@
       var w = window.innerWidth;
       var h = window.innerHeight;
       
+      for (int i = 0; i < h; i++) {
+        i++
+      }
+      
       function preload() {
         pic = loadImage("photo.jpeg")
       }
@@ -19,7 +23,7 @@
         background(100);
         texture(pic)
         rotateY(mouseX/10)
-        rotateX(mouseY/10)
+        rotateX(i)
         box(200,300)
       }
     </script>
