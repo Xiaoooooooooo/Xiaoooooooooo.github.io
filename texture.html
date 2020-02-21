@@ -1,0 +1,27 @@
+<html>
+  <script src="p5.min.js"></script>
+  <body>
+    <script>
+      var pic;
+      var w = window.innerWidth;
+      var h = window.innerHeight;
+      
+      function preload() {
+        pic = loadImage("photo.jpeg")
+      }
+      
+      function setup() {
+        createCanvas(w,h,WEBGL);
+      }
+      
+      function draw() {
+        background(100);
+        pic.background(255);
+        texture(pic)
+        rotateY(mouseX/10)
+        rotateX(mouseY/10)
+        box(200,300)
+      }
+    </script>
+  </body>
+</html>
