@@ -1,0 +1,27 @@
+<html>
+  <script src="p5.js"></script>
+  <script src="game1.js"></script>
+  <body>
+    <script>
+    
+    var jumper = new jumper(); //declare object
+    
+    function setup() {
+      createCanvas(window.innerWidth,window.innerHeight) //declare the region
+    }
+    function draw() {
+      clear(); //clears the backray
+      jumper.show(); //shows the circle
+      jumper.update(); //updates the circle movement
+      
+    }
+    
+    function keyPressed() {
+      if (keyCode === 32) {
+        jumper.up(); //jumps up
+      }
+      
+    }
+    </script>
+  </body>
+</html>
