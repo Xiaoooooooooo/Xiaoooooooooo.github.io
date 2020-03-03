@@ -1,9 +1,14 @@
 <html>
   <script src="p5.js"></script>
   <script src="game1.js"></script>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+  </style>
   <body>
     <script>
-    
     var jumper = new jumper(); //declare object
     
     function setup() {
@@ -14,13 +19,19 @@
       jumper.show(); //shows the circle
       jumper.update(); //updates the circle movement
       
+      if ((keyIsDown(37)) && (jumper.x > 29)) {
+        jumper.x -=10;
+      }
+      if ((keyIsDown(39)) && (jumper.x < window.innerWidth -30)) {
+        jumper.x +=10;
+      }
+      
     }
     
     function keyPressed() {
       if (keyCode === 32) {
         jumper.up(); //jumps up
       }
-      
     }
     </script>
   </body>

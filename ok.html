@@ -1,0 +1,76 @@
+<html>
+  <script src="p5.js"></script>
+  <body>
+    <script>
+    var w = window.innerWidth;
+    var h = window.innerHeight;
+    var x;
+    var y;
+    var lockW = 0;
+    var lockS = 0;
+    var lockA = 0;
+    var lockD = 0;
+    var borderW = w - 60;
+    var borderH = h - 60;
+    //changable config
+    var speed = 20; //movement speed
+    var playerX = w/2 //starting point of X
+    var playerY = h/2 //starting point of Y
+    
+    function setup() {
+      createCanvas(w,h)
+    }
+    function draw() {
+      clear()
+      //create player
+      rect(playerX,playerY,50,50);
+      //color the player
+      fill("red");
+      
+      if (keyIsDown(87) && (lockW == 0)) {
+        //move player up when pressing w
+        playerY-=speed; //movement speed
+        if ( (playerY < 0)) {
+          lockW = 1; //locks key W
+        }
+      }
+      else if ((playerY > 0)) {
+        lockW = 0;
+      }
+      
+      if (keyIsDown(83) && (lockS == 0)) {
+        //move player up when pressing s
+        playerY+=speed; //movement speed
+        if ((playerY > borderH)) {
+          lockS = 1;
+        }
+      }
+      else if ((playerY < borderH)) {
+        lockS = 0;
+      }
+      
+      if (keyIsDown(65) && (lockA == 0)) {
+        //move player up when pressing a
+        playerX-=speed;
+        if ((playerX < 0)) {
+          lockA = 1;
+        }
+      }
+      else if ((playerX > 0)) {
+        lockA = 0;
+      }
+      
+      if (keyIsDown(68) && (lockD == 0)) {
+        //move player up when pressing d
+        playerX+=speed;
+        if ((playerX > borderW)) {
+          lockD = 1;
+        }
+      }
+      else if ((playerX < borderW)) {
+        lockD = 0;
+        }
+      }
+    </script>
+  </body>
+</html>
