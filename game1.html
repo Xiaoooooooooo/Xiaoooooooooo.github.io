@@ -1,6 +1,7 @@
 <html>
   <script src="p5.js"></script>
   <script src="game1.js"></script>
+  <script src="barrier.js"></script>
   <style>
     body {
       margin: 0;
@@ -10,7 +11,7 @@
   <body>
     <script>
     var jumper = new jumper(); //declare object
-    
+    var barrier = new barrier();
     function setup() {
       createCanvas(window.innerWidth,window.innerHeight) //declare the region
     }
@@ -18,6 +19,9 @@
       clear(); //clears the backray
       jumper.show(); //shows the circle
       jumper.update(); //updates the circle movement
+      
+      barrier.show();
+      barrier.update();
       
       if ((keyIsDown(37)) && (jumper.x > 29)) {
         jumper.x -=10;
