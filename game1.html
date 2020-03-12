@@ -2,27 +2,45 @@
   <script src="p5.js"></script>
   <script src="game1.js"></script>
   <script src="barrier.js"></script>
+  <script src="p5.collide2d.js"></script>
   <style>
     body {
       margin: 0;
       padding: 0;
     }
+    #count {
+      position: absolute;
+      top:1%;
+      left:2%;
+    }
   </style>
   <body>
+    <h1 id="count">0</h1>
     <script>
     var jumper = new jumper(); //declare object
-    var barrier = new barrier();
+    var barriers = [];
+    var hit = false;
+    var a = 0;
+    var jumpcount = 0;
     function setup() {
       createCanvas(window.innerWidth,window.innerHeight) //declare the region
+      for (let i = 0; i < 2; i++) {
+        barriers.push(new barrier());
+      }
     }
     function draw() {
       clear(); //clears the backray
       jumper.show(); //shows the circle
       jumper.update(); //updates the circle movement
-      
-      barrier.show();
-      barrier.update();
-      
+      for (let i = 0; i < barriers.length; i++) {
+        barriers[i].show();
+        barriers[i].update();
+        hit = collideRectCircle(barriers[i].x + 19,barriers[i].y +8,25,192,jumper.x,jumper.y,50);
+        if (hit === true) {
+          window.alert("Game Over")
+        }
+        
+      }
       if ((keyIsDown(37)) && (jumper.x > 29)) {
         jumper.x -=10;
       }
@@ -30,11 +48,13 @@
         jumper.x +=10;
       }
       
+      
     }
     
     function keyPressed() {
       if (keyCode === 32) {
         jumper.up(); //jumps up
+        jumpcount++
       }
     }
     </script>

@@ -1,8 +1,10 @@
+var jumpcount = 0;
+
 function jumper() {
   this.x = window.innerWidth/2;
   this.y = 0;
   this.gravity = 0.5; //the force of gravity
-  this.lift = -12; // the opposing force of gravity when i jump
+  this.lift = -15; // the opposing force of gravity when i jump
   this.velocity = 0;//speed of gravity force
   this.speed = 10;
   
@@ -15,8 +17,9 @@ function jumper() {
   
   //build a function called up that will take the initial velocity and modify by opposing gravity
   this.up = function() {
+    if (jumpcount < 3)
     this.velocity += this.lift;
-    
+    jumpcount++
   };
   
   //this is continuously update the jumper
@@ -28,6 +31,7 @@ function jumper() {
     if (this.y > height -25) {
       this.y = height -25;
       this.velocity = 0;
+      jumpcount = 0;
     }
     //this will prevent the jumper from leaving the top of the screen
     if (this.y < 0) {
