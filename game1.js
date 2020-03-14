@@ -17,9 +17,7 @@ function jumper() {
   
   //build a function called up that will take the initial velocity and modify by opposing gravity
   this.up = function() {
-    if (jumpcount < 3)
     this.velocity += this.lift;
-    jumpcount++
   };
   
   //this is continuously update the jumper
@@ -31,7 +29,6 @@ function jumper() {
     
       this.y = height -25;
       this.velocity = 0;
-      jumpcount = 0;
     
     //this will prevent the jumper from leaving the top of the screen
     if (this.y < 0) {
