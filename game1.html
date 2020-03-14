@@ -29,7 +29,6 @@
     var barriers = [];
     var hit = false;
     var a = 0;
-    var jumpcount = 0;
     function setup() {
       createCanvas(window.innerWidth,window.innerHeight) //declare the region
       for (let i = 0; i < 2; i++) {
@@ -65,6 +64,7 @@
     function keyPressed() {
       if (keyCode === 32) {
         jumper.up(); //jumps up
+        
       }
     }
     </script>

@@ -1,4 +1,4 @@
-var jumpcount = 0;
+
 
 function jumper() {
   this.x = window.innerWidth/2;
@@ -26,10 +26,10 @@ function jumper() {
     this.y += this.velocity;
     this.velocity *= 0.9; //air resistance
     //this will prevent the jumper from leaving the ground
-    
+    if (this.y > height -25) {
       this.y = height -25;
       this.velocity = 0;
-    
+    }
     //this will prevent the jumper from leaving the top of the screen
     if (this.y < 0) {
       this.y = 0;
