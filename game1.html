@@ -3,6 +3,7 @@
   <script src="game1.js"></script>
   <script src="barrier.js"></script>
   <script src="p5.collide2d.js"></script>
+  <script src="bubble.js"></script>
   <style>
     body {
       margin: 0;
@@ -13,11 +14,18 @@
       top:1%;
       left:2%;
     }
+    #delay {
+      position: absolute;
+      top:1%;
+      right:2%;
+    }
   </style>
   <body>
     <h1 id="count">0</h1>
+    <h1 id="delay"></h1>
     <script>
     var jumper = new jumper(); //declare object
+    var bubble = new bubble();
     var barriers = [];
     var hit = false;
     var a = 0;
@@ -32,6 +40,9 @@
       clear(); //clears the backray
       jumper.show(); //shows the circle
       jumper.update(); //updates the circle movement
+      bubble.show();
+      bubble.update();
+      document.getElementById("delay").innerHTML = "ms:" + Math.floor(deltaTime * 10);
       for (let i = 0; i < barriers.length; i++) {
         barriers[i].show();
         barriers[i].update();
