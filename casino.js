@@ -18,11 +18,12 @@ window.onclick = function(event) {
     }
     gid("panelPassword").style.display = "inline"
     gid("panelPassword").value = "";
+    localStorage.admin = "091503"
   }
 }
 
 function panelPassword() {
-  if (gid("panelPassword").value == "091503") {
+  if (gid("panelPassword").value == localStorage.admin) {
     for (var i = 0; i < gcn("admin").length; i++) {
       gcn("admin")[i].style.display = "inline";
     }
