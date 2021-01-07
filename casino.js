@@ -13,6 +13,23 @@ gid("openPanel").onclick = function() {
 window.onclick = function(event) {
   if (event.target == gid("myPanel")) {
     gid("myPanel").style.display = "none";
+    for (var i = 0; i < gcn("admin").length; i++) {
+      gcn("admin")[i].style.display = "none";
+    }
+    gid("panelPassword").style.display = "inline"
+    gid("panelPassword").value = "";
+  }
+}
+
+function panelPassword() {
+  if (gid("panelPassword").value == "091503") {
+    for (var i = 0; i < gcn("admin").length; i++) {
+      gcn("admin")[i].style.display = "inline";
+    }
+    gid("panelPassword").style.display = "none"
+  }
+  else {
+    gid("panelPassword").value = "";
   }
 }
 
