@@ -18,7 +18,6 @@ window.onclick = function(event) {
     }
     gid("panelPassword").style.display = "inline"
     gid("panelPassword").value = "";
-    localStorage.admin = "091503"
   }
 }
 
