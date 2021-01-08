@@ -66,19 +66,19 @@
       }
     </style>
   </head>
-  <body onload="checking()">
+  <body onload="balance.checking()">
     <div id="error"></div>
     <button id="openPanel">Admin Panel</button>
     <div id="myPanel" class="panel">
       <div class="panel-content">
         <div class="panel-header">
           <h1>Admin Panel</h1>
-          <input type="password" onchange="panelPassword()" id="panelPassword">
+          <input type="password" onchange="adminPanel.panelPassword()" id="panelPassword">
         </div>
         <div class="panel-body">
-          <button onclick="currency(1)" class="admin">+1</button>
-          <button onclick="currency(100)" class="admin">+100</button>
-          <button onclick="currency(0)" class="admin">reset</button>
+          <button onclick="adminPanel.currency(1)" class="admin">+1</button>
+          <button onclick="adminPanel.currency(100)" class="admin">+100</button>
+          <button onclick="adminPanel.currency(0)" class="admin">reset</button>
         </div>
       </div>
     </div>
