@@ -30,12 +30,13 @@ function panelPassword() {
   }
   else {
     gid("panelPassword").value = "";
+    localStorage.currency = Number(localStorage.currency)-1
   }
 }
 
 function checking() {
-  if ((localStorage.currency) == "undefined") {
-      localStorage.currency = 1;
+  if ((localStorage.currency) == undefined) {
+      localStorage.currency = 0;
   } 
   else {
     return
