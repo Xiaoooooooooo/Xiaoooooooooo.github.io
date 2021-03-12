@@ -2,20 +2,35 @@
   <head>
     <link rel="stylesheet" href="casino.css">
   </head>
-  <body onload="balance.checking()">
+  <body onload="user.balanceChecking()">
     <div id="heading" style="grid-template-areas:'header header header user money';">
       <div class="title" style="grid-area: header">
-        <p>Xiao's God Dam Casino</p>
+        <p>Xiao's Blackjack</p>
       </div>
       <div class="title" style="grid-area: user">
-        <p>User</p>
+        <p id="username"></p>
       </div>
       <div class="title" style="grid-area:money">
         <p id="balance"></p>
       </div>
     </div>
     <div id="error"></div>
+    <div id="blackjack">
+      <div id="player"></div>
+      <div id="result"></div>
+      <div id="dealer"></div>
+    </div>
+    <div id="scoreboard" onload="localScoreBoard.getScores()"></div>
+    <div id="blackjackBelow">
+      <h1 id="bjTitle">BlackJack</h1>
+      <p id="bjDesc">Type in amount of money you want to bet and press Enter.</p>
+      <input onchange="blackjack.start()" id="blackjackAmount">
+    </div>
     <button id="openPanel">Admin Panel</button>
+    <div id="hitStand">
+      <button onclick="blackjack.hit()" id="hitButton">Hit</button>
+      <button onclick="blackjack.stand()" id="standButton">Stand</button>
+    </div>
     <div id="myPanel" class="panel">
       <div class="panel-content">
         <div class="panel-header">
@@ -29,7 +44,6 @@
         </div>
       </div>
     </div>
-    <h1 id="placeholder" class="topright"></h1>
     <script src="casino.js"></script>
   </body>
 </html>

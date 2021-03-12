@@ -1,74 +1,173 @@
 body {
-  background: rgb(255,0,0);
-  text-align: center;
-  background: linear-gradient(119deg, rgba(255,0,0,1) 0%, rgba(121,9,9,1) 20%, rgba(0,0,0,1) 50%, rgba(121,9,9,1) 80%, rgba(255,0,0,1) 100%);
-  margin:0%;
+    background: rgb(0,0,0);
+    text-align: center;
+    margin:0%;
 }
 #heading {
-  display: grid;
-  background-color: #5b84B1FF;
-  padding: 10px;
-  text-align: center;
-  height: 6%;
-  font-size: 15px;
-  font-weight: bold;
-  margin: 0%;
-  position: absolute;
-  width: 98.55%;
-  grid-gap:10px;
+    display: grid;
+    background-color: rgb(255, 255, 255);
+    padding: 0px;
+    text-align: center;
+    height: 6%;
+    font-size: 15px;
+    font-weight: bold;
+    margin: 0%;
+    position: absolute;
+    width: 100%;
+    grid-gap:0px;
 }
 .title {
-  background-color: #FC766AFF;
-}
-.topright {
-  position: absolute;
-  top: -7px;
-  right: 16px;
-  color: gold;
+    background: rgb(2,0,36);
+    background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(0,0,0,1) 13%, rgba(255,0,0,1) 57%, rgba(0,0,0,1) 100%);
 }
 #error {
-  position: absolute;
-  top: 45%;
-  right: 45%;
-  text-align: center;
-  font-size: 50px;
-  z-index: 1;
-  color: red;
+    position: absolute;
+    top: 45%;
+    right: 45%;
+    text-align: center;
+    font-size: 50px;
+    z-index: 1;
+    color: red;
 }
 #openPanel {
-  position: absolute;
-  top:95%;
-  left:92%;
+    position: absolute;
+    top:95%;
+    left:92%;
 }
 .panel {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  padding-top: 100px;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0,0,0,0.4);
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
 }
 .panel-content {
-  position: relative;
-  background-color: #fefefe;
-  margin: auto;
-  padding: 0;
-  border: 1px solid #888;
-  width: 80%;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
-  text-align: center;
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    text-align: center;
 }
 .panel-header {
-  padding: 2px 16px;
-  background-color: #4158D0;
-  background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
-  color: white;
+    padding: 2px 16px;
+    background-color: #4158D0;
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+    color: white;
 }
-.panel-body {padding: 0px 16px;}
+.panel-body {
+    padding: 0px 16px;
+}
 .admin {
-  display: none;
+    display: none;
+}
+
+#blackjack {
+    position: absolute;
+    width: 30%;
+    height: 50%;
+    bottom: 30%;
+    right: 35%;
+    background-color: #2A6D11;
+    box-shadow: inset 2px 2px 50px 6px rgba(0,0,0,0.79);
+    text-align:center;
+}
+
+#player {
+    position: absolute;
+    width: 100%;
+    height: 10%;
+    font-weight:bold;
+    font-size:40px;
+    bottom: 5%;
+}
+
+#dealer {
+    position: absolute;
+    width: 100%;
+    height: 10%;
+    font-weight:bold;
+    font-size:40px;
+    top: 5%;
+}
+
+#result {
+    position: absolute;
+    width: 100%;
+    height: 10%;
+    font-weight:bold;
+    font-size:60px;
+    top: 45%;
+}
+
+#blackjackBelow {
+    position: absolute;
+    bottom:10%;
+    right:35%;
+    width:30%;
+    height:20%;
+    text-align: center;
+}
+
+#bjTitle {
+    position: absolute;
+    color: #2A6D11;
+    width:100%;
+    height:50%;
+}
+
+#bjDesc {
+    position: absolute;
+    color:#2A6D11;
+    bottom:21%;
+    width:100%;
+    height:15%;
+}
+
+#blackjackAmount {
+    position: absolute;
+    bottom:10%;
+    right:25%;
+    width:50%;
+    height:10%;
+    color:black;
+}
+
+#scoreboard {
+    position:absolute;
+    right:10%;
+    height:90%;
+}
+
+#hitStand {
+    position: absolute;
+    right: 65%;
+    bottom: 30%;
+    height: 10%;
+    width: 5%;
+    background-color: #2A6D11;
+    display:none;
+}
+
+#hitbutton {
+    position: absolute;
+    height: 50%;
+    width: 100%;
+    right: 0%;
+    background-color:rgb(255, 0, 0);
+}
+#standbutton {
+    position: absolute;
+    height: 50%;
+    width: 100%;
+    top: 50%;
+    right: 0%;
+    background-color:rgb(0, 255, 0);
 }
